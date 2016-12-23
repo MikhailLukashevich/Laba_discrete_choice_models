@@ -60,7 +60,7 @@ a_true = 0
 a_false = 0
 a_s = int(len(corpus['a'])*0.8)
 a_f = int(len(corpus['a']))
-a_t = len(corpus['a'])*0.2
+a_t = int(len(corpus['a'])*0.2) + 1
 for i in range(a_s, a_f):
     xa = corpus['a'][i]
     if model_a.score(xa) > model_o.score(xa):
@@ -71,6 +71,7 @@ for i in range(a_s, a_f):
 print('----------RECOGNITION PHONEME "a"----------')
 print("a_true", a_true)
 print("a_false", a_false)
+print("a_t",a_t)
 
 acc_a = float(a_true) / a_t
 print ("recognition accuracy for phoneme 'a', acc_a= ",acc_a)
@@ -80,7 +81,7 @@ o_true = 0
 o_false = 0
 o_s = int(len(corpus['o'])*0.8)
 o_f = int(len(corpus['o']))
-o_t = len(corpus['o'])*0.2
+o_t = int(len(corpus['o'])*0.2) + 1
 for i in range(o_s, o_f):
     xo = corpus['o'][i]
     if model_o.score(xo) > model_a.score(xo):
@@ -91,6 +92,7 @@ for i in range(o_s, o_f):
 print('----------RECOGNITION PHONEME "o"----------')
 print("o_true", o_true)
 print("o_false", o_false)
+print("a_t",a_t)
 
 acc_o = float(o_true) / o_t
 print ("recognition accuracy for phoneme 'o', acc_o= ",acc_o)
