@@ -92,7 +92,7 @@ for i in range(o_s, o_f):
 print('----------RECOGNITION PHONEME "o"----------')
 print("o_true", o_true)
 print("o_false", o_false)
-print("a_t",a_t)
+print("o_t",o_t)
 
 acc_o = float(o_true) / o_t
 print ("recognition accuracy for phoneme 'o', acc_o= ",acc_o)
